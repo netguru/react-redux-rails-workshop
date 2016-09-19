@@ -20,12 +20,17 @@ gem 'rwr-redux', :git => 'git@github.com:netguru/rwr-redux.git'
 gem 'rwr-view_helpers'
 gem 'rwr-react_router'
 
+gem 'devise'
+gem 'grape'
+gem 'hashie-forbidden_attributes'
+
 group :development, :test do
   gem 'byebug', platform: :mri
 end
 
 group :development do
   gem 'web-console'
+  gem 'pry'
   gem 'listen', '~> 3.0.5'
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
