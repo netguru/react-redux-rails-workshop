@@ -7,12 +7,12 @@ import MultipleMonitors from 'redux-devtools-multiple-monitors';
 
 const DevTools = createDevTools(
   <DockMonitor
-    toggleVisibilityKey='ctrl-h'
-    changePositionKey='ctrl-q'
+    toggleVisibilityKey="ctrl-h"
+    changePositionKey="ctrl-q"
     defaultIsVisible={false}
   >
     <MultipleMonitors>
-      <LogMonitor theme='tomorrow' />
+      <LogMonitor theme="tomorrow" />
       <Dispatcher />
     </MultipleMonitors>
   </DockMonitor>
