@@ -20,8 +20,12 @@ CounterModifier.propTypes = {
 };
 
 const mapDispatchToProps = dispatch => ({
-  increaseCount() { dispatch(counterActions.increase()); },
-  decreaseCount() { dispatch(counterActions.decrease()); },
+  increaseCount() {
+    dispatch(counterActions.increase());
+  },
+  decreaseCount() {
+    dispatch(counterActions.decrease());
+  },
 });
 
 export default connect(
