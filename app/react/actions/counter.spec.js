@@ -7,12 +7,12 @@ import { counterConstants } from '../constants';
 
 test('returns correct increase action', (t) => {
   expect(counterActions.increase()).to.deep.equal({
-    type: counterConstants.increase,
+    type: counterConstants.INCREASE,
   });
 });
 
 test('returns correct decrease action', (t) => {
   expect(counterActions.decrease()).to.deep.equal({
-    type: counterConstants.decrease,
+    type: counterConstants.DECREASE,
   });
 });
