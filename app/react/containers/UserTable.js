@@ -3,15 +3,19 @@ import { connect } from 'react-redux';
 
 import { userActions } from '../actions';
 
-import UserCreator from 'components/UserCreator';
+import UserTable from 'components/UserTable';
+
+const mapStateToProps = state => ({
+  users: state.users,
+});
 
 const mapDispatchToProps = dispatch => ({
-  addUser(user) {
-    dispatch(userActions.addUser(user));
+  deleteUser(user) {
+    dispatch(userActions.deleteUser(user));
   },
 });
 
 export default connect(
-  null,
+  mapStateToProps,
   mapDispatchToProps
-)(UserCreator);
+)(UserTable);
