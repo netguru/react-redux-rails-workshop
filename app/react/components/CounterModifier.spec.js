@@ -7,8 +7,8 @@ import sinon from 'sinon';
 import chai, { expect } from 'chai';
 import chaiEnzyme from 'chai-enzyme';
 
-import Button from '../components/Button';
-import { CounterModifier } from './CounterModifier';
+import Button from './Button';
+import CounterModifier from './CounterModifier';
 
 chai.use(chaiEnzyme());
 

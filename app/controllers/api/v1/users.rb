@@ -40,9 +40,9 @@ module API
         params do
           requires :email, type: String, desc: 'E-mail address'
           requires :password, type: String, desc: 'Password'
-          requires :password_confirmation, type: String, desc: 'Password confirmation'
         end
         post do
+          params[:password_confirmation] = params[:password] # YOLO XD
           user = User.new(params)
           if user.save
             user

@@ -1,12 +1,12 @@
 import { applyMiddleware, compose, createStore } from 'redux';
-import { browserHistory } from 'react-router';
-import { routerMiddleware } from 'react-router-redux';
+import thunk from 'redux-thunk';
+import createLogger from 'redux-logger';
 
 import rootReducer from '../reducers';
 import DevTools from '../containers/DevTools';
 
 const enhancer = compose(
-  applyMiddleware(routerMiddleware(browserHistory)),
+  applyMiddleware(thunk, createLogger()),
   DevTools.instrument()
 );
 
