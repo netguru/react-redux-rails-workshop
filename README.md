@@ -16,9 +16,10 @@ You will need the following things properly installed on your computer:
  * npm
 
 ## Installation
-* `bundle install`
-* `rake db:setup`
-* `npm install`
+
+```sh
+make
+```
 
 ## Running / Development
 * run rails: `rails s`
