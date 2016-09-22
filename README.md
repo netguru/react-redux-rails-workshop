@@ -25,7 +25,6 @@ You will need the following things properly installed on your computer:
 * run webpack
   * without hot-reload: `npm start`
   * with hot-reload: `npm run start-hot-dev`
-* [list how to run app]
 
 ## Further Reading / Useful Links
 * [react.js](https://facebook.github.io/react/)
