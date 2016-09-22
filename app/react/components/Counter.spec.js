@@ -7,7 +7,7 @@ import sinon from 'sinon';
 import chai, { expect } from 'chai';
 import chaiEnzyme from 'chai-enzyme';
 
-import { Counter } from './Counter';
+import Counter from './Counter';
 
 chai.use(chaiEnzyme());
 

@@ -1,17 +1,6 @@
 import React, { PropTypes } from 'react';
 import { connect } from 'react-redux';
-
-export const Counter = ({ count }) => (
-  <div className="counter">
-    <h1 className="counter__value">
-      Current count is: {count}
-    </h1>
-  </div>
-);
-
-Counter.propTypes = {
-  count: PropTypes.number.isRequired,
-};
+import Counter from 'components/Counter';
 
 const mapStateToProps = state => ({
   count: state.counter,
