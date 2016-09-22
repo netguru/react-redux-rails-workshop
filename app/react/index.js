@@ -6,6 +6,7 @@ import DevTools from './containers/DevTools';
 import Counter from './containers/Counter';
 import CounterModifier from './containers/CounterModifier';
 import UserCreator from './containers/UserCreator';
+import UserTable from './containers/UserTable';
 
 RWR.run();
 
@@ -20,6 +21,7 @@ RWRRedux.registerContainer('DevTools', DevTools);
 RWRRedux.registerContainer('Counter', Counter);
 RWRRedux.registerContainer('CounterModifier', CounterModifier);
 RWRRedux.registerContainer('UserCreator', UserCreator);
+RWRRedux.registerContainer('UserTable', UserTable);
 
 import { usersApi } from './api';
 window.usersApi = usersApi;

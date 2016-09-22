@@ -6,10 +6,17 @@ const addedUser = (user) => ({
   user,
 });
 
-export const addUser = () => dispatch => {
-  const email = 'asdasd@adads.asd' + (Math.random() * 100);
-  const password = 'adas1asdasdasd';
-
+export const addUser = ({ email, password }) => dispatch => {
   userApi.addUser(email, password)
     .then(result => dispatch(addedUser(result.data)));
+}
+
+const deletedUser = (user) => ({
+  type: userConstants.DELETE,
+  user,
+});
+
+export const deleteUser = (id) => dispatch => {
+  userApi.deleteUser(id)
+    .then(result => dispatch(deletedUser(result.data)));
 }

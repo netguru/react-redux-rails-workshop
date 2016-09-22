@@ -29,7 +29,7 @@ module API
             user = User.find_by(id: params[:id])
             return status :not_found if user.nil?
             if user.destroy
-              status :ok
+              user
             else
               status :unprocessable_entity
             end

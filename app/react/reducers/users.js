@@ -11,10 +11,7 @@ export default (state = [], action) => {
         userReducer(null, action),
       ];
     case userConstants.DELETE:
-      return [
-        ...state.slice(0, state.findIndex(u => u.id === action.user.id)),
-        ...state.slice(state.findIndex(u => u.id === action.user.id) + 1),
-      ];
+      return state.filter(u => u.id !== action.user.id);
     case userConstants.UPDATE:
       const user = state.find(u => u.id === action.user.id);
       return [

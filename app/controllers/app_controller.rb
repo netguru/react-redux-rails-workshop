@@ -3,6 +3,7 @@ class AppController < ApplicationController
   end
 
   def admin
+    @users = User.all
   end
 
   def counter

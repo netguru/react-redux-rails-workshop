@@ -1,10 +1,7 @@
-ADMIN
-
-=link_to 'home', '/'
-
-=redux_store 'Store'
+=redux_store 'Store', { users: @users }
 
 =redux_container 'DevTools', store: 'Store'
 
 .content
+    =redux_container 'UserTable', store: 'Store'
     =redux_container 'UserCreator', store: 'Store'

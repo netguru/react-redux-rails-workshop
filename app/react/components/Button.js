@@ -1,7 +1,10 @@
 import React, { PropTypes } from 'react';
 
 const Button = ({ children, onClick }) => (
-  <button onClick={onClick}>
+  <button
+    className="btn btn-primary"
+    onClick={onClick}
+  >
     {children}
   </button>
 );
