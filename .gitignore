@@ -196,3 +196,4 @@ Session.vim
 .netrwhist
 *~
 
+app/assets/javascripts/react_bundle.js
