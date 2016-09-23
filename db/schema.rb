@@ -10,7 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160923080625) do
+ActiveRecord::Schema.define(version: 20160923104046) do
+
+  create_table "comments", force: :cascade do |t|
+    t.integer  "restaurant_id"
+    t.integer  "rating"
+    t.text     "descripiton"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+    t.index ["restaurant_id"], name: "index_comments_on_restaurant_id"
+  end
 
   create_table "restaurants", force: :cascade do |t|
     t.string   "name"
