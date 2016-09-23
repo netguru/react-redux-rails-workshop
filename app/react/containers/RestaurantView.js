@@ -1,6 +1,7 @@
 import React, { PropTypes } from 'react';
 import RestaurantCommentList from 'components/RestaurantCommentList';
 import { connect } from 'react-redux';
+import CommentCreator from './CommentCreator';
 
 const RestaurantView = ({ restaurant }) => (
   <div>
@@ -10,6 +11,7 @@ const RestaurantView = ({ restaurant }) => (
       <p className="panel-body">{restaurant.description}</p>
     </div>
     <h2>Comments</h2>
+    <CommentCreator />
     <RestaurantCommentList comments={restaurant.comments} />
   </div>
 );

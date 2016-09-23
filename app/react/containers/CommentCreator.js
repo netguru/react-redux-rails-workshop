@@ -2,7 +2,7 @@ import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
 
 import Button from 'components/Button';
-import { commentActions } from 'actions';
+import { restaurantActions } from 'actions';
 
 class CommentCreator extends Component {
   constructor() {
@@ -16,6 +16,7 @@ class CommentCreator extends Component {
   onAddComment(e) {
     e.preventDefault();
     this.props.addComment({
+      id: this.props.restaurantId,
       rating: this.state.rating,
       description: this.state.description,
     });
@@ -72,13 +73,19 @@ class CommentCreator extends Component {
   }
 }
 
+
+const mapStateToProps = state => ({
+  restaurantId: state.restaurants[0].id,
+});
+
 const mapDispatchToProps = dispatch => ({
-  addComment({ rating, description }) {
-    dispatch(commentActions.createComment(rating, description));
+  addComment({ id, rating, description }) {
+    dispatch(restaurantActions.createComment(id, rating, description));
   },
 });
 
+
 export default connect(
-  null,
+  mapStateToProps,
   mapDispatchToProps
 )(CommentCreator);

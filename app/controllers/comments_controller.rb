@@ -16,12 +16,13 @@ class CommentsController < ApplicationController
   end
 
   def create
-    @restaurant = Restaurant.find(params[:id])
-    @comment = Comment.create(comment_params)
-    @restaurant.comments << @comment
+    @restaurant = Restaurant.find(params[:restaurant_id])
+    comment = Comment.new(comment_params)
+    comment.user = current_user
+    @restaurant.comments << comment
     @restaurant.save
     respond_to do |format|
-      format.js { render json: @comment }
+      format.js { render json: @restaurant.comments.last }
     end
   end
 
