@@ -4,7 +4,7 @@ import RestaurantListItem from './RestaurantListItem';
 
 const RestaurantsList = ({ restaurants }) => (
   <div className="restaurant-list">
-    <ul>
+    <ul className="list-group">
       {restaurants.map((restaurant) => (
         <RestaurantListItem key={restaurant.id} restaurant={restaurant} />
       ))}
@@ -49,4 +49,3 @@ const RestaurantsList = ({ restaurants }) => (
 // };
 
 export default RestaurantsList;
-
