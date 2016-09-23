@@ -3,12 +3,17 @@
   background-position: center;
   background-repeat: no-repat;
   background-size: cover;
-  width: 32px;
-  height: 32px;
+  width: 24px;
+  height: 24px;
   opacity: 0.5;
   display: inline-block;
 
   &__active {
       opacity: 1;
   }
+}
+
+.rating-stars {
+  display: inline-block;
+  vertical-align: middle;
 }
