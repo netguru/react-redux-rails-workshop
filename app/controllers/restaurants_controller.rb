@@ -36,6 +36,7 @@ class RestaurantsController < ApplicationController
       id: @restaurant_with_comments_data.id,
       name: @restaurant_with_comments_data.name,
       description: @restaurant_with_comments_data.description,
+      address: @restaurant_with_comments_data.address,
       average_rating: @restaurant_with_comments_data.average_rating,
       comments: Comment.where(restaurant: @restaurant_with_comments_data)
     }
