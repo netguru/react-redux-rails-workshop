@@ -6,6 +6,13 @@ import { connect } from 'react-redux';
 class RestaurantAppProvider extends Component {
   componentDidMount() {
     this.props.loadRestaurants();
+    this.loadRestaurantsTimeout = window.setInterval(() => {
+      this.props.loadRestaurants();
+    }, 5000);
+  }
+
+  componentWillUnmount() {
+    window.clearInterval(this.loadRestaurantsTimeout);
   }
 
   render() {
