@@ -10,6 +10,7 @@ import UserTable from 'containers/UserTable';
 import RestaurantView from 'containers/RestaurantView';
 import RestaurantCreator from 'containers/RestaurantCreator';
 import RestaurantAppProvider from 'containers/RestaurantAppProvider';
+import CommentCreator from 'containers/CommentCreator';
 
 RWR.run();
 
@@ -28,3 +29,4 @@ RWRRedux.registerContainer('UserTable', UserTable);
 RWRRedux.registerContainer('RestaurantView', RestaurantView);
 RWRRedux.registerContainer('RestaurantCreator', RestaurantCreator);
 RWRRedux.registerContainer('RestaurantAppProvider', RestaurantAppProvider);
+RWRRedux.registerContainer('CommentCreator', CommentCreator);
