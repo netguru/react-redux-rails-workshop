@@ -25,6 +25,6 @@ RWRRedux.registerContainer('Counter', Counter);
 RWRRedux.registerContainer('CounterModifier', CounterModifier);
 RWRRedux.registerContainer('UserCreator', UserCreator);
 RWRRedux.registerContainer('UserTable', UserTable);
-RWRRedux.registerComponent('RestaurantView', RestaurantView);
+RWR.registerComponent('RestaurantView', RestaurantView);
 RWRRedux.registerContainer('RestaurantCreator', RestaurantCreator);
 RWRRedux.registerContainer('RestaurantApp', RestaurantApp);
