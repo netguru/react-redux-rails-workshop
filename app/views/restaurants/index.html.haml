@@ -4,5 +4,5 @@
 .content
   .row.text-center
     =link_to "Add new restaurant", new_restaurant_path, class: 'btn btn-primary'
-  .row
+  .row.col-md-offset-3.col-md-6
     =redux_container 'RestaurantAppProvider', store: 'Store'
