@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import RestaurantsList from './RestaurantsList';
-import RestaurantsSearch from './RestaurantsSearch';
+import RestaurantsSearch from 'containers/RestaurantsSearch';
 
 
 const Restaurants = ({ restaurants }) => (

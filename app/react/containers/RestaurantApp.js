@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import Restaurants from 'components/Restaurants';
 
 const mapStateToProps = state => ({
-  restaurants: state.restaurants
+  restaurants: state.restaurants.filter((r) => r.name.includes(state.currentSearchText)),
 });
 
 // function mapStateToProps(state) {
