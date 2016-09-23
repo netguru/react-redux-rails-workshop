@@ -2,6 +2,7 @@ import { combineReducers } from 'redux';
 
 import counter from 'reducers/counter';
 import users from 'reducers/users';
+import restaurants from 'reducers/restaurants';
 
 export default combineReducers({
   counter,
