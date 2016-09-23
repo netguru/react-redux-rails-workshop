@@ -1,10 +1,25 @@
 class CommentsController < ApplicationController
   skip_before_action :verify_authenticity_token
 
-  def create
-    @comment = Comment.create(comment_params)
+  def update
+    @comment = Comment.find(params[:id])
+  end
+
+  def destroy
+    Comment.find(params[:id]).destroy
+
     respond_to do |format|
-      format.js { render json: @comment }
+      format.html { redirect_to root_path }
+      format.json { head :no_content }
+      format.js   { render :layout => false }
+    end
+  end
+
+  def create
+    @restaurant = Restaurant.find(params[:id])
+    @restaurant.comments << Comment.create(comment_params)
+    respond_to do |format|
+      format.js { render json: @restaurant }
     end
   end
 

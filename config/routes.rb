@@ -4,6 +4,7 @@ Rails.application.routes.draw do
 
   root to: 'restaurants#index'
   get '/admin' => 'app#admin'
-  resources :restaurants, except: [:index]
-  resources :comments
+  resources :restaurants, except: [:index] do
+    resources :comments
+  end
 end
