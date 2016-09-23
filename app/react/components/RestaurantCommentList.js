@@ -1,6 +1,7 @@
 import React from 'react';
+import RestaurantComment from './RestaurantComment';
 
-const RestaurantCommentList = ({comments}) => (
+const RestaurantCommentList = ({ comments }) => (
   <div className="comments-list">
     <ul>
       {comments.map((comment) => (
@@ -9,3 +10,4 @@ const RestaurantCommentList = ({comments}) => (
     </ul>
   </div>
 )
+export default RestaurantCommentList;

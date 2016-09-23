@@ -11,6 +11,7 @@ class RestaurantsController < ApplicationController
 
   def show
     @restaurant = Restaurant.find(params[:id])
+    @comments = @restaurant.comments.where(restaurant: @restaurant)
   end
 
   def new
