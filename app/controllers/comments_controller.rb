@@ -17,9 +17,11 @@ class CommentsController < ApplicationController
 
   def create
     @restaurant = Restaurant.find(params[:id])
-    @restaurant.comments << Comment.create(comment_params)
+    @comment = Comment.create(comment_params)
+    @restaurant.comments << @comment
+    @restaurant.save
     respond_to do |format|
-      format.js { render json: @restaurant }
+      format.js { render json: @comment }
     end
   end
 
