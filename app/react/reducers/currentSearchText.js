@@ -1,4 +1,4 @@
-export default (state = 'DUPA', action) => {
+export default (state = '', action) => {
   switch (action.type) {
     case 'ON_SEARCH_CHANGE':
       return action.value;
