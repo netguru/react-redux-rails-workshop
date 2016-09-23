@@ -8,5 +8,15 @@
 
 50.times do |i|
   r = Restaurant.find_or_initialize_by(address: "Address #{i}")
-  r.update_attributes(name: FFaker::NameIT.name, description: ['burger', 'pizza', 'sushi', 'ice cream', 'pierozki'].sample)
+  r.update_attributes(
+    name: FFaker::NameIT.name,
+    description: ['burger', 'pizza', 'sushi', 'ice cream', 'pierozki'].sample
+  )
+
+  r.comments << (0..5).to_a.map do |i|
+    Comment.new(
+      rating: (1..5).to_a.sample,
+      description: FFaker::Lorem.sentence
+    )
+  end
 end
