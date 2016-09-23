@@ -27,3 +27,14 @@ export const createRestaurant = (name, address, description) => dispatch => {
       window.location = `/restaurants/${result.data.id}`;
     });
 }
+
+const commentAdded = (restaurantId, comment) => ({
+  type: 'RESTAURANT_COMMENT_ADDED',
+  restaurantId,
+  comment,
+});
+
+export const createComment = (id, rating, description) => dispatch => (
+  restaurantsApi.createComment(id, rating, description)
+    .then(result => dispatch(commentAdded(id, result.data)))
+)

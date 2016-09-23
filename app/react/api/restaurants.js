@@ -19,3 +19,10 @@ export function createRestaurant(name, address, description) {
 export function loadRestaurants() {
   return createApi(BASE_URL).get(`/`);
 }
+
+export function addComment(id, rating, description) {
+  createApi(BASE_URL).post(`/restaurants/${id}/comments`, {
+    rating,
+    description,
+  });
+};
