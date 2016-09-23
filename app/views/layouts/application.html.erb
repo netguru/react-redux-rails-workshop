@@ -16,12 +16,16 @@
           <li>
             <%= link_to 'Home', '/' %>
           </li>
+          <% unless current_user %>
           <li>
-            <%= link_to 'Counter', 'counter' %>
+            <%= link_to 'Log in', new_user_session_path %>
           </li>
           <li>
-            <%= link_to 'Admin', 'admin' %>
+            <%= link_to 'Sign up', new_user_registration_path %>
           </li>
+          <% else %>
+          <li><%= link_to 'Sign out', destroy_user_session_path, method: :delete %></li>
+          <% end %>
         </ul>
       </div>
     </header>
