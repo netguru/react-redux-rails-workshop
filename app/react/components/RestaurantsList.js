@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import RestaurantListItem from './RestaurantListItem';
+
 
 const RestaurantsList = ({ restaurants }) => (
   <div className="restaurant-list">
