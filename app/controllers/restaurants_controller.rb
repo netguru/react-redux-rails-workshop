@@ -10,8 +10,7 @@ class RestaurantsController < ApplicationController
   end
 
   def show
-    @restaurant = Restaurant.find(params[:id])
-    @comments = @restaurant.comments.where(restaurant: @restaurant)
+    @restaurant = restaurant_with_comments
   end
 
   def new
@@ -28,5 +27,17 @@ class RestaurantsController < ApplicationController
 
   def restaurant_params
     params.require(:restaurant).permit(:name, :address, :description)
+  end
+
+
+  def restaurant_with_comments
+    @restaurant_with_comments_data = Restaurant.find(params[:id])
+    {
+      id: @restaurant_with_comments_data.id,
+      name: @restaurant_with_comments_data.name,
+      description: @restaurant_with_comments_data.description,
+      average_rating: @restaurant_with_comments_data.average_rating,
+      comments: Comment.where(restaurant: @restaurant_with_comments_data)
+    }
   end
 end

@@ -7,7 +7,7 @@ import Counter from 'containers/Counter';
 import CounterModifier from 'containers/CounterModifier';
 import UserCreator from 'containers/UserCreator';
 import UserTable from 'containers/UserTable';
-import RestaurantView from 'components/RestaurantView';
+import RestaurantView from 'containers/RestaurantView';
 import RestaurantCreator from 'containers/RestaurantCreator';
 import RestaurantAppProvider from 'containers/RestaurantAppProvider';
 
@@ -25,6 +25,6 @@ RWRRedux.registerContainer('Counter', Counter);
 RWRRedux.registerContainer('CounterModifier', CounterModifier);
 RWRRedux.registerContainer('UserCreator', UserCreator);
 RWRRedux.registerContainer('UserTable', UserTable);
-RWR.registerComponent('RestaurantView', RestaurantView);
+RWRRedux.registerContainer('RestaurantView', RestaurantView);
 RWRRedux.registerContainer('RestaurantCreator', RestaurantCreator);
 RWRRedux.registerContainer('RestaurantAppProvider', RestaurantAppProvider);

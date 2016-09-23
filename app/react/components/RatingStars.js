@@ -12,7 +12,7 @@ const RatingStar = ({ active }) => (
 const RatingStars = ({ rating }) => (
   <div className="rating-stars">
       {[0, 0, 0, 0, 0].map((star, index) => (
-        <RatingStar active={rating >= index + 1} />
+        <RatingStar key={index} active={rating >= index + 1} />
       ))}
   </div>
 )
