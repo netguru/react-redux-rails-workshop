@@ -7,8 +7,12 @@ import Counter from 'containers/Counter';
 import CounterModifier from 'containers/CounterModifier';
 import UserCreator from 'containers/UserCreator';
 import UserTable from 'containers/UserTable';
+<<<<<<< HEAD
 import RestaurantSearch from 'containers/RestaurantSearch';
 import RestaurantCreator from 'containers/RestaurantCreator';
+=======
+import RestaurantApp from 'containers/RestaurantApp';
+>>>>>>> 2cb3dc2184786806b4d92af9eecb15394656ae5e
 
 RWR.run();
 
@@ -24,5 +28,9 @@ RWRRedux.registerContainer('Counter', Counter);
 RWRRedux.registerContainer('CounterModifier', CounterModifier);
 RWRRedux.registerContainer('UserCreator', UserCreator);
 RWRRedux.registerContainer('UserTable', UserTable);
+<<<<<<< HEAD
 RWRRedux.registerContainer('RestaurantSearch', RestaurantSearch);
 RWRRedux.registerContainer('RestaurantCreator', RestaurantCreator);
+=======
+RWRRedux.registerContainer('RestaurantApp', RestaurantApp);
+>>>>>>> 2cb3dc2184786806b4d92af9eecb15394656ae5e
