@@ -4,9 +4,11 @@ import RestaurantListItem from './RestaurantListItem';
 
 const RestaurantsList = ({ restaurants }) => (
   <div className="restaurant-list">
-    {restaurants.map((restaurant) => {
+    <ul>
+      {restaurants.map((restaurant) => (
         <RestaurantListItem key={restaurant.id} restaurant={restaurant} />
-    })}
+      ))}
+    </ul>
   </div>
 );
 
