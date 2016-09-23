@@ -8,6 +8,7 @@ import CounterModifier from 'containers/CounterModifier';
 import UserCreator from 'containers/UserCreator';
 import UserTable from 'containers/UserTable';
 import RestaurantSearch from 'containers/RestaurantSearch';
+import RestaurantCreator from 'containers/RestaurantCreator';
 
 RWR.run();
 
@@ -24,3 +25,4 @@ RWRRedux.registerContainer('CounterModifier', CounterModifier);
 RWRRedux.registerContainer('UserCreator', UserCreator);
 RWRRedux.registerContainer('UserTable', UserTable);
 RWRRedux.registerContainer('RestaurantSearch', RestaurantSearch);
+RWRRedux.registerContainer('RestaurantCreator', RestaurantCreator);
