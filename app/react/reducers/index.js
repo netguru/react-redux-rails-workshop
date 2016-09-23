@@ -6,4 +6,5 @@ import users from 'reducers/users';
 export default combineReducers({
   counter,
   users,
+  restaurants
 });
