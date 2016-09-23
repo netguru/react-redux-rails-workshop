@@ -5,4 +5,5 @@ Rails.application.routes.draw do
   get '/' => 'app#index'
   get '/admin' => 'app#admin'
   resources :restaurants
+  resources :comments
 end
