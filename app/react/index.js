@@ -22,6 +22,3 @@ RWRRedux.registerContainer('Counter', Counter);
 RWRRedux.registerContainer('CounterModifier', CounterModifier);
 RWRRedux.registerContainer('UserCreator', UserCreator);
 RWRRedux.registerContainer('UserTable', UserTable);
-
-import { usersApi } from './api';
-window.usersApi = usersApi;

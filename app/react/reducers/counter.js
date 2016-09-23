@@ -1,4 +1,4 @@
-import { counterConstants } from '../constants';
+import { counterConstants } from 'constants';
 
 export default (state = 0, action) => {
   switch (action.type) {

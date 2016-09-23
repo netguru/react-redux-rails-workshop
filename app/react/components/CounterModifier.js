@@ -1,5 +1,5 @@
 import React, { PropTypes } from 'react';
-import Button from './Button';
+import Button from 'components/Button';
 
 const CounterModifier = ({ increaseCount, decreaseCount }) => (
   <div className="counter-modifier">

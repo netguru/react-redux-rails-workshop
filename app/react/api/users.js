@@ -1,29 +1,24 @@
 import axios from 'axios';
-const api = axios.create({
-  baseURL: 'http://localhost:3000/api/v1',
+
+const BASE_URL = 'http://localhost:3000/api/v1';
+
+const createApi = (url) => axios.create({
+  baseURL: url,
   headers: {'X-Requested-With': 'XMLHttpRequest'},
   responseType: 'json',
 });
 
-export function getUsers() {
-  return api.get('/users');
-}
-
-export function getUser(userId) {
-  return api.get(`/users/${userId}`);
-}
-
-export function deleteUser(userId) {
-  return api.delete(`/users/${userId}`);
-}
-
-export function addUser(email, password) {
-  return api.post(`/users`, {
+export function createUser(email, password) {
+  return createApi(BASE_URL).post(`/users`, {
     email,
     password,
   });
 }
 
-export function updateUser(userId, changes) {
-  return api.put(`/users/${userId}`, changes);
+export function deleteUser(userId) {
+  return createApi(BASE_URL).delete(`/users/${userId}`);
+}
+
+export function updateUser(userId, { email, password }) {
+  return createApi(BASE_URL).put(`/users/${userId}`, { email, password });
 }

@@ -1,17 +1,17 @@
-import { userConstants } from '../constants';
-import userReducer from './user';
+import { userConstants } from 'constants';
 
 export default (state = [], action) => {
   switch (action.type) {
-    case userConstants.GET_ALL:
-      return action.users;
-    case userConstants.ADD:
+    case userConstants.CREATE:
       return [
         ...state,
-        userReducer(null, action),
+        action.user,
       ];
     case userConstants.DELETE:
-      return state.filter(u => u.id !== action.user.id);
+      return [
+        ...state.slice(0, state.findIndex(u => u.id === action.user.id)),
+        ...state.slice(state.findIndex(u => u.id === action.user.id) + 1),
+      ];
     case userConstants.UPDATE:
       const user = state.find(u => u.id === action.user.id);
       return [

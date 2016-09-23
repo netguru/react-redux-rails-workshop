@@ -1,7 +1,7 @@
 import React, { PropTypes } from 'react';
 import { connect } from 'react-redux';
 
-import { counterActions } from '../actions';
+import { counterActions } from 'actions';
 
 import CounterModifier from 'components/CounterModifier';
 

@@ -1,2 +1,2 @@
-export * as counterConstants from './counter';
-export * as userConstants from './user';
+export * as counterConstants from 'constants/counter';
+export * as userConstants from 'constants/user';
