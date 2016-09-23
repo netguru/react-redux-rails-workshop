@@ -23,6 +23,7 @@ gem 'rwr-react_router'
 gem 'devise'
 gem 'grape'
 gem 'hashie-forbidden_attributes'
+gem 'ffaker'
 
 group :development, :test do
   gem 'byebug', platform: :mri

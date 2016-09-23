@@ -2,4 +2,7 @@
 =redux_container 'DevTools', store: 'Store'
 
 .content
+  .row.text-center
+    =link_to "Add new restaurant", new_restaurant_path, class: 'btn btn-primary'
+  .row
     =redux_container 'RestaurantAppProvider', store: 'Store'
