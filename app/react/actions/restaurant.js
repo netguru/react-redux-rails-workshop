@@ -10,6 +10,11 @@ export const onSearchChange = (value) => ({
   value,
 });
 
+export const onTagSearchChange = (value) => ({
+  type: 'ON_TAG_SEARCH_CHANGE',
+  value,
+});
+
 export const loadRestaurants = () => dispatch => {
   restaurantsApi.loadRestaurants().then(result => dispatch(
     loadRestaurantsSuccess(result.data)

@@ -23,7 +23,7 @@ class RestaurantAppProvider extends Component {
 }
 
 const mapStateToProps = state => ({
-  restaurants: state.restaurants.filter((r) => r.name.includes(state.currentSearchText)),
+  restaurants: state.restaurants.filter((r) => r.name.includes(state.currentSearchText) && r.description.includes(state.currentTagSearchText)),
 });
 
 const mapDispatchToProps = dispatch => ({

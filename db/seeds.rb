@@ -7,5 +7,6 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 50.times do |i|
-  Restaurant.create(name: "Restaurant #{i}", description: ['burger', 'pizza', 'sushi', 'ice cream', 'pierozki'].sample, address: "Address #{i}")
+  r = Restaurant.find_or_initialize_by(address: "Address #{i}")
+  r.update_attributes(name: FFaker::NameIT.name, description: ['burger', 'pizza', 'sushi', 'ice cream', 'pierozki'].sample)
 end
