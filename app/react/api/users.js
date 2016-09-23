@@ -20,5 +20,8 @@ export function deleteUser(userId) {
 }
 
 export function updateUser(userId, { email, password }) {
-  return createApi(BASE_URL).put(`/users/${userId}`, { email, password });
+  return createApi(BASE_URL).put(`/users/${userId}`, {
+    email,
+    password
+  });
 }

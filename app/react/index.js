@@ -1,12 +1,12 @@
 import RWR, { integrationsManager } from 'react-webpack-rails';
 import RWRRedux from 'rwr-redux';
 
-import configureStore from './store';
-import DevTools from './containers/DevTools';
-import Counter from './containers/Counter';
-import CounterModifier from './containers/CounterModifier';
-import UserCreator from './containers/UserCreator';
-import UserTable from './containers/UserTable';
+import configureStore from 'store';
+import DevTools from 'containers/DevTools';
+import Counter from 'containers/Counter';
+import CounterModifier from 'containers/CounterModifier';
+import UserCreator from 'containers/UserCreator';
+import UserTable from 'containers/UserTable';
 
 RWR.run();
 

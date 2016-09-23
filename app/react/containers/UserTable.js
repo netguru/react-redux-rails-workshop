@@ -16,7 +16,7 @@ const UserTable = ({ users, deleteUser }) => (
       </tr>
     </thead>
     <tbody>
-      {(! users.length) && (
+      {!users.length && (
         <tr className="no-users">
           <td colSpan="5">
             <p className="no-users__text">
@@ -25,6 +25,7 @@ const UserTable = ({ users, deleteUser }) => (
           </td>
         </tr>
       )}
+
       {users.map(user => (
         <UserRow
           key={user.id}
