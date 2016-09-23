@@ -6,9 +6,10 @@ class RestaurantsSearch extends Component {
       <div className="restaurant-search">
         <input
           type='text'
+          className="form-control"
           onChange={this.props.onSearchChange}
           defaultValue={this.props.currentSearchText}
-          placeholder="Restaurant name"
+          placeholder={this.props.placeholder}
         />
       </div>
     )

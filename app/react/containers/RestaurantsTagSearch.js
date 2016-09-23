@@ -2,16 +2,16 @@ import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
 
 import RestaurantsSearch from 'components/RestaurantsSearch';
-import { onSearchChange } from 'actions/restaurant';
+import { onTagSearchChange } from 'actions/restaurant';
 
 const mapStateToProps = state => ({
-  currentSearchText: state.currentSearchText,
-  placeholder: 'Restaurant name'
+  currentSearchText: state.currentSearchTagText,
+  placeholder: 'Restaurant Type'
 });
 
 const mapDispatchToProps = dispatch => ({
   onSearchChange(e) {
-    dispatch(onSearchChange(e.target.value));
+    dispatch(onTagSearchChange(e.target.value));
   },
 });
 
