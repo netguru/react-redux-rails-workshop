@@ -1,10 +1,13 @@
 import React, { Component } from 'react';
+import RatingStars from './RatingStars'
 
 const RestaurantComment = ({ comment }) => (
-  <div className="comments">
-    <p className="panel-body">{comment.rating}</p>
-    <p className="panel-body">{comment.description}</p>
-  </div>
+  <li className="list-group-item">
+    {comment.description}
+    <div className='pull-right'>
+      <RatingStars rating={comment.rating} />
+    </div>
+  </li>
 );
 
 export default RestaurantComment;
