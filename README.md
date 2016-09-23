@@ -22,10 +22,13 @@ $ make
 ```
 
 ## Running / Development
-* run rails: `rails s`
-* run webpack
-  * without hot-reload: `npm start`
-  * with hot-reload: `npm run start-hot-dev`
+
+Run those two commands in separate windows:
+
+```sh
+$ make start-npm
+$ make start-rails
+```
 
 ## Further Reading / Useful Links
 * [react.js](https://facebook.github.io/react/)
