@@ -2,8 +2,8 @@ Rails.application.routes.draw do
   devise_for :users
   mount API::V1::Users => '/api'
 
-  get '/' => 'app#index'
+  root to: 'restaurants#index'
   get '/admin' => 'app#admin'
-  resources :restaurants
+  resources :restaurants, except: [:index]
   resources :comments
 end

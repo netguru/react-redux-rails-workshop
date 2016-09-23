@@ -17,5 +17,5 @@ export function createRestaurant(name, address, description) {
 }
 
 export function loadRestaurants() {
-  return createApi(BASE_URL).get(`/restaurants`);
+  return createApi(BASE_URL).get(`/`);
 }

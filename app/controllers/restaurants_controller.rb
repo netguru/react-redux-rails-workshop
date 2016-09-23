@@ -2,7 +2,11 @@ class RestaurantsController < ApplicationController
   skip_before_action :verify_authenticity_token
 
   def index
-    render json: Restaurant.all.to_json
+    if request.format.symbol == :json
+      render json: Restaurant.all.to_json
+    else
+      render 'index'
+    end
   end
 
   def show
