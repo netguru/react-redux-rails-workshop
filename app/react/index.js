@@ -9,7 +9,7 @@ import UserCreator from 'containers/UserCreator';
 import UserTable from 'containers/UserTable';
 import RestaurantView from 'components/RestaurantView';
 import RestaurantCreator from 'containers/RestaurantCreator';
-import RestaurantApp from 'containers/RestaurantApp';
+import RestaurantAppProvider from 'containers/RestaurantAppProvider';
 
 RWR.run();
 
@@ -27,4 +27,4 @@ RWRRedux.registerContainer('UserCreator', UserCreator);
 RWRRedux.registerContainer('UserTable', UserTable);
 RWR.registerComponent('RestaurantView', RestaurantView);
 RWRRedux.registerContainer('RestaurantCreator', RestaurantCreator);
-RWRRedux.registerContainer('RestaurantApp', RestaurantApp);
+RWRRedux.registerContainer('RestaurantAppProvider', RestaurantAppProvider);
