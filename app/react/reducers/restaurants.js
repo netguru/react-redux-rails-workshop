@@ -1,18 +1,7 @@
-const sampleRestaurants = [
-  {
-    id: 1,
-    name: 'Test #1',
-    address: 'Testowy address',
-  },
-  {
-    id: 2,
-    name: 'Test #2',
-    address: 'Testowy address #2',
-  },
-]
-
-export default (state = sampleRestaurants, action) => {
+export default (state = [], action) => {
   switch (action.type) {
+    case 'LOAD_RESTAURANTS_SUCCESS':
+      return action.restaurants;
     default:
       return state;
   }
