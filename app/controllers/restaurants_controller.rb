@@ -3,7 +3,7 @@ class RestaurantsController < ApplicationController
 
   def index
     if request.format.symbol == :json
-      render json: Restaurant.all.to_json
+      render json: Restaurant.all.to_json(methods: :average_rating)
     else
       render 'index'
     end
